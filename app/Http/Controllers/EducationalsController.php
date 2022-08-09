@@ -24,7 +24,7 @@ class EducationalsController extends Controller
 
         $attributes = request()->validate([
             'credential' => 'required',
-            'institution' => 'nullable|url',
+            'institution' => 'required',
             'year' => 'required'
 
         ]);
@@ -53,7 +53,7 @@ class EducationalsController extends Controller
 
         $attributes = request()->validate([
             'credential' => 'required',
-            'institution' => 'nullable|url',
+            'institution' => 'required',
             'year' => 'required'
         ]);
 
