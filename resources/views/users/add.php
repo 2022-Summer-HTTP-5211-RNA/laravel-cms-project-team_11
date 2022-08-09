@@ -17,7 +17,7 @@
 
         <header class="w3-padding">
 
-            <h1 class="w3-text-red">Portfolio Console</h1>
+            <h1 class="w3-text-blue">Portfolio Console</h1>
 
             <?php if(Auth::check()): ?>
                 You are logged in as <?= auth()->user()->first ?> <?= auth()->user()->last ?> | 
@@ -46,7 +46,7 @@
                     
                     <?php if($errors->first('first')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('first'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('first'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -56,7 +56,7 @@
 
                     <?php if($errors->first('last')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('last'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('last'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -66,7 +66,7 @@
 
                     <?php if($errors->first('email')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('email'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('email'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -76,7 +76,7 @@
 
                     <?php if($errors->first('password')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('password'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('password'); ?></span>
                     <?php endif; ?>
                 </div>
 

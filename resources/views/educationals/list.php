@@ -39,28 +39,36 @@
 
         <section class="w3-padding">
 
-            <h2>Manage Users</h2>
+            <h2>Manage Education</h2>
 
             <table class="w3-table w3-stripped w3-bordered w3-margin-bottom">
                 <tr class="w3-red">
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th></th>
+                    <th>Credential</th>
+                    <th>Institution</th>
+                    <th>Year</th>
                     <th>Created</th>
                     <th></th>
                     <th></th>
                 </tr>
-                <?php foreach($users as $user): ?>
+                <?php foreach($educationals as $educational): ?>
                     <tr>
-                        <td><?= $user->first ?> <?= $user->last ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user->created_at->format('M j, Y') ?></td>
-                        <td><a href="/console/users/edit/<?= $user->id ?>">Edit</a></td>
-                        <td><a href="/console/users/delete/<?= $user->id ?>">Delete</a></td>
+                        <td><?= $educational->id ?></td>
+                        <td><?= $educational->credential ?></td>
+                        <td>
+                            <a href="/educational/<?= $educational->institution ?>">
+                                <?= $educational->institution ?>
+                            </a>
+                        </td>
+                        <td><?= $educational->year ?></td>
+                        <td><?= $educational->created_at->format('M j, Y') ?></td>
+                        <td><a href="/console/educationals/edit/<?= $educational->id ?>">Edit</a></td>
+                        <td><a href="/console/educationals/delete/<?= $educational->id ?>">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
 
-            <a href="/console/users/add" class="w3-button w3-green">New User</a>
+            <a href="/console/educationals/add" class="w3-button w3-green">New educational</a>
 
         </section>
 

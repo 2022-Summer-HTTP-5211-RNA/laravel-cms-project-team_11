@@ -16,7 +16,7 @@
 
 <header class="w3-padding">
 
-    <h1 class="w3-text-red">My Portfolio!</h1>
+    <h1 class="w3-text-blue">My Portfolio!</h1>
 
 </header>
 

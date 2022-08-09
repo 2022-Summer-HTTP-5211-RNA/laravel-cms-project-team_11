@@ -17,7 +17,7 @@
 
         <header class="w3-padding">
 
-            <h1 class="w3-text-red">Portfolio Console</h1>
+            <h1 class="w3-text-blue">Portfolio Console</h1>
 
             <?php if(Auth::check()): ?>
                 You are logged in as <?= auth()->user()->first ?> <?= auth()->user()->last ?> | 
@@ -46,7 +46,7 @@
                     
                     <?php if($errors->first('title')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('title'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('title'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -56,7 +56,7 @@
 
                     <?php if($errors->first('url')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('url'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('url'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -66,7 +66,7 @@
 
                     <?php if($errors->first('slug')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('slug'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('slug'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -76,7 +76,7 @@
 
                     <?php if($errors->first('content')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('content'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('content'); ?></span>
                     <?php endif; ?>
                 </div>
 
@@ -93,7 +93,7 @@
                     </select>
                     <?php if($errors->first('type_id')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('type_id'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('type_id'); ?></span>
                     <?php endif; ?>
                 </div>
 

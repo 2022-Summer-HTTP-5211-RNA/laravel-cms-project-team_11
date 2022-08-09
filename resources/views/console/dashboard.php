@@ -16,7 +16,7 @@
 
         <header class="w3-padding">
 
-            <h1 class="w3-text-red">Portfolio Console</h1>
+            <h1 class="w3-text-blue">Portfolio Console</h1>
 
             <?php if(Auth::check()): ?>
                 You are logged in as <?= auth()->user()->first ?> <?= auth()->user()->last ?> | 
@@ -35,6 +35,9 @@
 
             <ul id="dashboard">
                 <li><a href="/console/projects/list">Manage Projects</a></li>
+                <li><a href="/console/educationals/list">Manage Education</a></li>
+                <li><a href="/console/skills/list">Manage Skills</a></li>
+                <li><a href="/console/socials/list">Manage Social Media</a></li>
                 <li><a href="/console/types/list">Manage Types</a></li>
                 <li><a href="/console/users/list">Manage Users</a></li>
                 <li><a href="/console/logout">Log Out</a></li>

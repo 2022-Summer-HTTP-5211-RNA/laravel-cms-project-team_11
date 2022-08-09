@@ -39,28 +39,34 @@
 
         <section class="w3-padding">
 
-            <h2>Manage Users</h2>
+            <h2>Manage Socials</h2>
 
             <table class="w3-table w3-stripped w3-bordered w3-margin-bottom">
                 <tr class="w3-red">
+                    <th></th>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th>URL</th>
                     <th>Created</th>
                     <th></th>
                     <th></th>
                 </tr>
-                <?php foreach($users as $user): ?>
+                <?php foreach($socials as $social): ?>
                     <tr>
-                        <td><?= $user->first ?> <?= $user->last ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user->created_at->format('M j, Y') ?></td>
-                        <td><a href="/console/users/edit/<?= $user->id ?>">Edit</a></td>
-                        <td><a href="/console/users/delete/<?= $user->id ?>">Delete</a></td>
+                        <td><?= $social->id ?></td>
+                        <td><?= $social->name ?></td>
+                        <td>
+                            <a href="/social/<?= $social->url ?>">
+                                <?= $social->url ?>
+                            </a>
+                        </td>
+                        <td><?= $social->created_at->format('M j, Y') ?></td>
+                        <td><a href="/console/socials/edit/<?= $social->id ?>">Edit</a></td>
+                        <td><a href="/console/socials/delete/<?= $social->id ?>">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
 
-            <a href="/console/users/add" class="w3-button w3-green">New User</a>
+            <a href="/console/socials/add" class="w3-button w3-green">New Skill</a>
 
         </section>
 

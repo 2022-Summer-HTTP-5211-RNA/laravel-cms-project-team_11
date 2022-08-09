@@ -17,7 +17,7 @@
 
         <header class="w3-padding">
 
-            <h1 class="w3-text-red">Portfolio Console</h1>
+            <h1 class="w3-text-blue">Portfolio Console</h1>
 
             <?php if(Auth::check()): ?>
                 You are logged in as <?= auth()->user()->first ?> <?= auth()->user()->last ?> | 
@@ -46,7 +46,7 @@
                     
                     <?php if($errors->first('title')): ?>
                         <br>
-                        <span class="w3-text-red"><?= $errors->first('title'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('title'); ?></span>
                     <?php endif; ?>
                 </div>
 

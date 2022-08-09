@@ -34,33 +34,39 @@
 
         <section class="w3-padding">
 
-            <h2>Project Image</h2>
+            <h2>Add Social Media</h2>
 
-            <div class="w3-margin-bottom">
-                <?php if($project->image): ?>
-                    <img src="<?= asset('storage/'.$project->image) ?>" width="200">
-                <?php endif; ?>
-            </div>
-
-            <form method="post" action="/console/projects/image/<?= $project->id ?>" novalidate class="w3-margin-bottom" enctype="multipart/form-data">
+            <form method="post" action="/console/socials/add" novalidate class="w3-margin-bottom">
 
                 <?= csrf_field() ?>
 
                 <div class="w3-margin-bottom">
-                    <label for="image">Image:</label>
-                    <input type="file" name="image" id="image" value="<?= old('image') ?>" required>
+                    <label for="name">Name:</label>
+                    <input type="name" name="name" id="name" value="<?= old('name') ?>" required>
                     
-                    <?php if($errors->first('image')): ?>
+                    <?php if($errors->first('name')): ?>
                         <br>
-                        <span class="w3-text-blue"><?= $errors->first('image'); ?></span>
+                        <span class="w3-text-blue"><?= $errors->first('name'); ?></span>
                     <?php endif; ?>
                 </div>
 
-                <button type="submit" class="w3-button w3-green">Add Image</button>
+                <div class="w3-margin-bottom">
+                    <label for="url">URL:</label>
+                    <input type="url" name="url" id="url" value="<?= old('url') ?>">
+
+                    <?php if($errors->first('url')): ?>
+                        <br>
+                        <span class="w3-text-blue"><?= $errors->first('url'); ?></span>
+                    <?php endif; ?>
+                </div>
+
+
+
+                <button type="submit" class="w3-button w3-green">Add Social Media</button>
 
             </form>
 
-            <a href="/console/projects/list">Back to Project List</a>
+            <a href="/console/socials/list">Back to Social Media List</a>
 
         </section>
 
