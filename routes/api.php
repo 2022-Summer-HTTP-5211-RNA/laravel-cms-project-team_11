@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Type;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Social;
+use App\Models\Educational;
+use App\Models\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +65,27 @@ Route::get('/projects/profile/{project?}', function(Project $project){
 
 });
 
+
+Route::get('/education', function(){
+
+    $qualifications = Educational::orderBy('id')->get();
+
+    return $qualifications;
+
+});
+// http://127.0.0.1:8000/api/skills
+Route::get('/skills', function(){
+
+    $skills = Skill::orderBy('id')->get();
+
+    return $skills;
+
+});
+// http://127.0.0.1:8000/api/socialmedia
+Route::get('/socialmedia', function(){
+
+    $socialmedia = Social::orderBy('id')->get();
+
+    return $socialmedia;
+
+});

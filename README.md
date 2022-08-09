@@ -10,7 +10,7 @@ php artisan migrate:refresh --seed
 
 All user acocunts will have the default password of "password".
 
-api routes
+Paths
 
 /console/skills/list
 /console/skills/add
@@ -26,3 +26,10 @@ api routes
 /console/educationals/add
 /console/educationals/edit/{educational:id}
 /console/educationals/delete/{educational:id}
+
+
+Routes Apis
+
+/education
+/skills
+/socialmedia
