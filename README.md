@@ -13,23 +13,37 @@ All user acocunts will have the default password of "password".
 Paths
 
 /console/skills/list
+
 /console/skills/add
+
 /console/skills/edit/{skill:id}
+
 /console/skills/delete/{skill:id}
 
+
 /console/socials/list
+
 /console/socials/add
+
 /console/socials/edit/{social:id}
+
 /console/socials/delete/{social:id}
 
+
 /console/educationals/list
+
 /console/educationals/add
+
 /console/educationals/edit/{educational:id}
+
 /console/educationals/delete/{educational:id}
 
 
-Routes Apis
+
+api routes
 
 /education
+
 /skills
+
 /socialmedia
